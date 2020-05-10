@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+		<h1>vueJS is Easy!!</h1>
+		<div id="example-2">
+		  	<button v-on:click="a++">Greet</button>
+		  	<p>{{greet}}</p>	  
+
+		  	<button v-on:click="b++">Greet</button>
+		  	<p>{{greetB}}</p>
+		</div>
+	<script>
+		var example2 = new Vue({
+			  el: '#example-2',
+			  data: {
+			    a: 0,
+			    b: 0,
+			  },
+			  computed:{
+			  	 greet: function () {
+			  	 	console.log('a running')
+			   		return this.a;
+			    },
+			    greetB: function () {
+			    	console.log('a running')
+			   		return this.b;
+			    }
+			  },
+			  methods: {
+			   
+			  }
+			})
+
+	new Vue({
+		el: '#exp',
+		data: {
+			a : 0,
+			b : 0,
+		},
+		methods:{
+			UpA:function(){
+				return this.a;
+			},
+			UpB:function(){
+				return this.b;
+			}
+
+		} 
+		  
+	})
+	</script> 
+</body>
+<script src="script.js"></script>
+</html>

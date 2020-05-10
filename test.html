@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	
+	<body>
+<template>
+    <div class="my-component">
+        <div>{{ message }}</div>
+        <div><button @click="changeMessage">Click me</button></div>
+    </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                message: 'This is my first component using binding data'
+            }
+        },
+        methods: {
+            changeMessage() {
+                this.message = 'this is new message'
+            }
+        },
+        watch: {
+            message() {
+                console.log('message changed')
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    .my-component {
+        color: red;
+    }
+</style>
+	</body>
+	<script src="script.js"></script>
+</html>

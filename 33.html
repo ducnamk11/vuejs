@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+
+<!-- ID -->
+		<div id="example">
+		 	<ul>
+		 		
+		 		<li v-for ="(menu , i)  in menus">{{menu}} - {{i }} </li> 
+		 	</ul>
+		 	<button @click = "menus.push('test')">add</button>
+ 		</div>
+
+ <!-- JAVASCRIPT -->
+		<script>
+		new Vue({
+			el: '#example',
+			data:{
+				menus: ['Home','FB','zalo']
+			}
+		});
+		</script>
+<!-- JAVASCRIPT -->
+
+	</body>
+	<script src="script.js"></script>
+</html>

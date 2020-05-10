@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<style type="text/css">
+		.square{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			display: inline-block;
+			margin: 10px;
+		}
+	</style>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+		<div id="example">
+			<div class="square" :style="atrib"></div>
+			<div class="square"></div>
+ 			<input type="text" v-model="height" >
+			<input type="text" v-model="width" >
+			<input type="text" v-model="color" >
+		</div>
+		<script>
+		new Vue({
+			el: '#example',
+			data:{
+				color : 'green',
+				height : 100,
+				width : 150,
+			},
+			computed:{
+				atrib: function(){
+					return{
+					backgroundColor : this.color,
+					height : this.height + 'px',
+					width : this.width+ 'px',
+				}
+				}
+			}
+			
+		});
+		</script>
+	</body>
+	<script src="script.js"></script>
+</html>

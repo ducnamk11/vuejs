@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+
+<!-- ID -->
+		<div id="example">
+			<p>i am docter nam</p>
+			<p v-if = 'xacdinh'>yes, i am</p>
+			<p v-else >no, i am teacher</p>
+			<button @click='xacdinh = !xacdinh'>change</button>
+		</div>
+
+ <!-- JAVASCRIPT -->
+		<script>
+		new Vue({
+			el: '#example',
+			data:{
+				xacdinh : true
+			}
+			
+		});
+		</script>
+<!-- JAVASCRIPT -->
+
+	</body>
+	<script src="script.js"></script>
+</html>

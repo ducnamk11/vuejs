@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+	<h1>vueJS is Easy!!</h1>
+	<div id="example-2">
+		<input type="text" v-model = 'name'>  	
+		<p>{{name}}</p>	
+	</div>
+
+	<script>
+	var example2 = new Vue({
+		el: '#example-2',
+		data: {
+			name:'hello nam',
+		},
+		methods:{
+			demo: function(){
+				alert(1);
+			}
+
+		} 
+		  
+	})
+	</script> 
+</body>
+<script src="script.js"></script>
+</html>

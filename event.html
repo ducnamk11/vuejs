@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+	<div v-on:mouseover  = 'toado' id="example-2">
+		<h1>vueJS is Easy!!</h1>
+  		<p >toa do chuot {{x}} - {{y}}</p>
+  		<p v-on:mouseover ='stopmouse'>dun su kien </p>
+	</div>
+
+	<script>
+	var example2 = new Vue({
+		  el: '#example-2',
+		  data: {
+		    x:0,
+		    y:0,
+		  },
+		  methods: {
+		    toado: function (event) {
+		     	this.x = event.clientX;
+		     	this.y = event.clientY;
+		    },
+		    stopmouse: function (event) {
+		     	event.stopPropagation();
+		    }
+		  }
+	})
+	</script>
+</body>
+<script src="script.js"></script>
+</html>

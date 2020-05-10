@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+		<div id="example">
+			<!-- cach 1  -->
+			<button v-on:click="changelink">change</button> 
+			<!-- cach 2 -->
+  			<!-- <button @click="changelink">change</button> -->
+
+			<a href="">{{linkval}}</a>
+			<a v-bind:href="linkval">{{linkval}}</a>
+		</div>
+		<script>
+		new Vue({
+			el: '#example',
+			data:{
+				linkval: 'https://www.youtube.com/',
+			},
+			methods: {
+				changelink: function() {
+					this.linkval = 'https://www.facebook.com/';
+				}
+			}
+			
+		});
+		</script>
+	</body>
+	<script src="script.js"></script>
+</html>

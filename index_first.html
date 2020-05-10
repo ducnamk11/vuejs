@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="obj">
+	<h2>helllo vue</h2>
+  	<p v-html="noidung"></p>
+ 	<a v-bind:href="title" >fb</a>
+ </div>
+	<script>
+		new Vue({
+			el:'#obj',
+			data:{
+				noidung:"<h1>hello vuej111s</h1>",
+				title:"https://www.facebook.com/ducnamk1196",
+			},
+			methods: {
+				write: function(){
+					return this.title;
+				}
+			}
+		});
+	</script>
+</body>
+<script src="script.js"></script>
+</html>

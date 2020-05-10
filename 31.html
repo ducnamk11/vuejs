@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+
+<!-- ID -->
+		<div id="example">
+		 	<ul>
+		 		<li v-for ="student in students">
+		 			<a v-for = "(val, key, index) in student">{{val+' - '+key}}</a>	
+		 			</li>
+		 	</ul>
+ 		</div>
+
+ <!-- JAVASCRIPT -->
+		<script>
+		new Vue({
+			el: '#example',
+			data:{
+				students:[
+					{name:'Sky', age:11, job:'teacher'},
+					{name:'Sky1', age:113, job:'worker'},
+					{name:'Sky2', age:115, job:'engine'},
+				]
+			}
+		});
+		</script>
+<!-- JAVASCRIPT -->
+
+	</body>
+	<script src="script.js"></script>
+</html>

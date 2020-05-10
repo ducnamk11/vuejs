@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>js</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>vueJS is Easy!!</h1>
+<!-- =============================================== -->
+
+ 		<div id="example">
+		 	<h1>{{title}}</h1>
+		 	<button @click = "title = 'changed event click!'" ref = 'infobutton'>update evnet</button>
+		 	<button @click = "destroyevent" ref = 'infobutton'>update evnet</button>
+ 		</div>
+<!-- =============================================== -->
+ 		<script>
+		var vn = new Vue({
+			el: '#example',
+			data:{
+				title: 'vuejs instance lifecycle',
+			},
+			beforeCreated: function(){
+				console.log('beforeCreated!!!');
+			},
+			created: function(){
+				console.log('created!!!');
+			},
+			beforeMounted: function(){
+				console.log('beforeMounted!!!');
+			},
+			mounted: function(){
+				console.log('mounted!!!');
+			},
+			beforeUpdated: function(){
+				console.log('beforeUpdated!!!');
+			},
+			updated: function(){
+				console.log('updated!!!');
+			},
+			beforeDestroy: function(){
+				console.log('beforeDestroy!!!');
+			},
+			destroy: function(){
+				console.log('destroy!!!');
+			},
+			methods:{
+				destroyevent: function(){
+					this.$destroy();
+				}
+			}
+		}); 
+		</script>
+ 
+	</body>
+	<script src="script.js"></script>
+</html>

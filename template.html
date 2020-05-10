@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+	<div id="example-2">
+  <!-- `greet` is the name of a method defined below -->
+  		<button v-on:click="greet"></button>
+  		<p>{{name}}</p>
+	</div>
+
+	<script>
+	var example2 = new Vue({
+		  el: '#example-2',
+		  data: {
+		    name:0
+		  },
+		  // define methods under the `methods` object
+		  methods: {
+		    greet: function () {
+		     this.name +=1;
+		    }
+		  }
+	})
+	</script>
+</body>
+<script src="script.js"></script>
+</html>
